@@ -4,30 +4,30 @@ Decoding of painful stimuli using fMRI data
    <br /><sub><b>Dylan Suttelrin-Guindon</b></sub>
 </a>
 
-##project title
+## project title
 
-#personal background
+# personal background
 
-##Project definition
+## Project definition
 
-#Background
+# Background
 
-#Tools
+# Tools
 
-#Data
+# Data
 
-#Deliverables
+# Deliverables
 
-##Results
+## Results
 
-#Overview
+# Overview
 
-#Deliverables
+# Deliverables
 
-#Statistical models
+# Statistical models
 
-##Conclusion
+## Conclusion
 
-##Acknowledgement
+## Acknowledgement
 
-##References
+## References
