@@ -31,10 +31,10 @@ A machine learning approach will be used to decode pain-evoked brain activity an
 
 The tools used to accomplish this task are:
 
-⋅⋅* Python scripts
-⋅⋅* Python modules (pandas, numpy, sklearn, nilearn, nibabel,  matplotlib, seaborn)
-⋅⋅* Bash to run the scripts on elm server
-⋅⋅* Git and Github to keep track of the project's evolution
+⋅⋅ Python scripts
+⋅⋅ Python modules (pandas, numpy, sklearn, nilearn, nibabel,  matplotlib, seaborn)
+⋅⋅ Bash to run the scripts on elm server
+⋅⋅ Git and Github to keep track of the project's evolution
 
 # Data
 
