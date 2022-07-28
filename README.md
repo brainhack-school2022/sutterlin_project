@@ -10,7 +10,7 @@ Brainhack readme file
 
 # personal background
 Education :
-  ⋅⋅* B.Sc. Neuroscience cognitive(fundamental research option)  from Université de Montréal
+  * B.Sc. Neuroscience cognitive(fundamental research option)  from Université de Montréal
 
 # Project definition
 
