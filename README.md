@@ -40,10 +40,8 @@ The tools used to accomplish this task are:
 
 The dataset that will be used comes from Desmartaux et al., 2021 and is access restricted. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done. 
 
-<a href="ProductPageURL">
-<img src="ImageURL" alt="text describing the image">
-</a>
-
+![](images/protocole_desmartaux2021.png)
+<img src="https://your-image-url.type" width="50" height="50">
 
 # Deliverables
 
