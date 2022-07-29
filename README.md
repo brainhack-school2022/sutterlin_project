@@ -43,6 +43,10 @@ The dataset that will be used comes from Desmartaux et al., 2021 and is access r
 ![](images/protocole_desmartaux2021.png)
 <img src="[https://your-image-url.type](https://github.com/brainhack-school2022/sutterlin_project/blob/main/images/protocole_desmartaux2021.png)" width="50" height="50">
 
+# Method
+ 
+A Support vector classifier from [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) was applied to 1726 statistical brain maps, each modeling the brain activation during a single painful shock. Those contrast maps were generated using a General Linear Model for which the code can be found [here](https://github.com/dylansutterlin/decoding_pain_experience). Those 1726 trials were used to predict the pain modulating condition administered prior to each shock. 
+
 # Target deliverables
 
 * Python scripts (main script that run the analyses)
@@ -54,6 +58,7 @@ The dataset that will be used comes from Desmartaux et al., 2021 and is access r
 
 # Results
 
+The SVC model was performed with a linear kernel
 ## Overview
 
 ## Actual deliverables
@@ -75,7 +80,7 @@ The dataset that will be used comes from Desmartaux et al., 2021 and is access r
 
 # Statistical model
 
-A Support vector classifier was used using [sklean documentation](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
+
 
 ## Conclusion
 
