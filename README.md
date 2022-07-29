@@ -102,9 +102,9 @@ _________________________________________
 4	4	0.158126	0.600950	1.014252	1.007101
 0	final	0.235852	0.539806	0.908738	0.953277
 __________________________________________
-*Final model accuracy = **0.60970874**
+* Final model accuracy = **0.60970874**
 
-*A Matrix confusion is presented to illustrate the model'performance
+* A Matrix confusion is presented to illustrate the model'performance
 ![](images/confusion_matrix_finalSVC.png)
 
 * With the final model, al the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
