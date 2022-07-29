@@ -99,6 +99,7 @@ The SVC model was performed with a linear kernel
 * With the final model, al the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
 
 
+![](file:///C:/Users/Dylan/AppData/Local/Temp/nilearn_plot_qwx74qvi.html)
 
 ## Conclusion
 
