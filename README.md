@@ -113,8 +113,11 @@ Thanks to all the instructors, espicially Marie_Eve and Francois who took the ti
 
 
 Casiglia, E., Finatti, F., Tikhonoff, V., Stabile, M. R., Mitolo, M., Albertini, F., Gasparotti, F., Facco, E., Lapenta, A. M., & Venneri, A. (2020). MECHANISMS OF HYPNOTIC ANALGESIA EXPLAINED BY FUNCTIONAL MAGNETIC RESONANCE (fMRI). International Journal of Clinical and Experimental Hypnosis, 68(1), 1 15. https://doi.org/10.1080/00207144.2020.1685331
+
 Desmarteaux, C., & Rainville, P. (2021). Brain Responses to Hypnotic Verbal Suggestions Predict Pain Modulation. Frontiers in Pain Research, 2, 18.
 Franz, M., Schmidt, B., Hecht, H., Naumann, E., & Miltner, W. H. R. (2021). Suggested visual blockade during hypnosis : Top-down modulation of stimulus processing in a visual oddball task. PloS One, 16(9), e0257380. https://doi.org/10.1371/journal.pone.0257380
+
 Hofbauer, R. K., Rainville, P., Duncan, G. H., & Bushnell, M. C. (2001). Cortical Representation of the Sensory Dimension of Pain. Journal of Neurophysiology, 86(1), 402 411. https://doi.org/10.1152/jn.2001.86.1.402
+
 Jiang, H., White, M. P., Greicius, M. D., Waelde, L. C., & Spiegel, D. (2017). Brain Activity and Functional Connectivity Associated with Hypnosis. Cerebral Cortex (New York, N.Y.: 1991), 27(8), 4083 4093. https://doi.org/10.1093/cercor/bhw220
 
