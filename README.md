@@ -47,6 +47,14 @@ The dataset that will be used comes from Desmartaux et al., 2021 and is access r
  
 A Support vector classifier from [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) was applied to 1726 statistical brain maps, each modeling the brain activation during a single painful shock. Those contrast maps were generated using a General Linear Model for which the code can be found [here](https://github.com/dylansutterlin/decoding_pain_experience). Those 1726 trials were used to predict the pain modulating condition administered prior to each shock. 
 
+There were four different type of verbal suggestion to modulate (or not for the control sugestions) the pain experience. Hence, there were four classes to predict with the model. Those four classes are listed a the following : 
+
+   * Hyperalgesia
+   * Neutral suggestion in Hyperalgesia run
+   * Hypoalgesia
+   * Neutral suggestion in hypoalgeisa run
+
+ 
 ## Target deliverables
 
 * Python scripts (main script that run the analyses)
@@ -80,7 +88,15 @@ The SVC model was performed with a linear kernel
 
 ## Statistical model
 
-A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimension with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
+* A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimension with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
+* Then a SVC was applied using on a K-fold cross-validation with the following parameters : `GroupShuffleSplit(n_splits = 5, test_size = 0.3, random_state = 33)`
+* The results of each of the folds are presented as followed : 
+
+* The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The metrics are presented as followed:
+
+*****metrics + accuracy score*****
+
+* With the final model, al the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
 
 
 
