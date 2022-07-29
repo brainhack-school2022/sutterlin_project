@@ -2,13 +2,12 @@ Brainhack readme file
 
 # sutterlin_project
 
+# Decoding of painful stimuli using fMRI data
+
+## personal background
 <a href="https://github.com/dylansutterlin">
    <br /><sub><b>Dylan Suttelrin-Guindon</b></sub>
 </a>
-
-# Decoding of painful stimuli using fMRI data
-
-# personal background
 Education :
   * B.Sc. Neuroscience cognitive(fundamental research option)  from Université de Montréal
 
@@ -107,7 +106,7 @@ __________________________________________
 * A Matrix confusion is presented to illustrate the model'performance
 ![](images/confusion_matrix_finalSVC.png)
 
-* With the final model, al the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
+* With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
 
 
 ![](images/glass_brain_model_3subj.png)
