@@ -92,9 +92,20 @@ The SVC model was performed with a linear kernel
 * Then a SVC was applied using on a K-fold cross-validation with the following parameters : `GroupShuffleSplit(n_splits = 5, test_size = 0.3, random_state = 33)`
 * The results of each of the folds are presented as followed : 
 
-* The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The metrics are presented as followed:
+* The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The metrics are presented as followed along the K-folds models:
+_________________________________________
+	Folds	r2	mae	mse	rmse
+0	0	0.003752	0.692857	1.240476	1.113767
+1	1	0.049787	0.659722	1.159722	1.076904
+2	2	0.094625	0.625917	1.119804	1.058208
+3	3	0.117059	0.635714	1.111905	1.054469
+4	4	0.158126	0.600950	1.014252	1.007101
+0	final	0.235852	0.539806	0.908738	0.953277
+__________________________________________
+*Final model accuracy = **0.60970874**
 
-*****metrics + accuracy score*****
+*A Matrix confusion is presented to illustrate the model'performance
+![](images/confusion_matrix_finalSVC.png)
 
 * With the final model, al the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
 
