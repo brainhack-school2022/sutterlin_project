@@ -43,17 +43,39 @@ The dataset that will be used comes from Desmartaux et al., 2021 and is access r
 ![](images/protocole_desmartaux2021.png)
 <img src="[https://your-image-url.type](https://github.com/brainhack-school2022/sutterlin_project/blob/main/images/protocole_desmartaux2021.png)" width="50" height="50">
 
-# Deliverables
+# Target deliverables
 
+* Python scripts (main script that run the analyses)
+* Metrics and statistics of the performances of the model
+* Graphics (e.g. ROC curve, confusion matrix)
+* fMRI maps of the voxels that best predicted suggestions plotted as 3D interactive plots
+* A markdown README.md describing globaly the project and putting it in a scientific context
+* Github repository provinding a fairly open science/reproductible aspect to the project
 
+# Results
 
-## Results
+## Overview
 
-# Overview
+## Actual deliverables
 
-# Deliverables
+* - [] Python scripts (main script that run the analyses 
+* - [x] Metrics and statistics of the performances of the model
+* - [x] Graphics (e.g. ROC curve, confusion matrix)
+* - [x] fMRI maps of the voxels that best predicted suggestions plotted as 3D interactive plots
+* - [x] A markdown README.md describing globaly the project and putting it in a scientific context
+* - [] Github repository provinding a fairly open science/reproductible aspect to the project
 
-# Statistical models
+### Final script's structure
+* data :Permission pending to give access to date (...)
+* docs : A readme file descripbing the pipeline
+* images : The images used in this README.me
+* results : Saved metrics' dataframe, brain maps (.nii files) showing the voxels that were the most predictive of the target
+* scripts : The main scripts with a function file that are called in main.py
+* src : All the general function that can we reused wihout context
+
+# Statistical model
+
+A Support vector classifier was used using [sklean documentation](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html)
 
 ## Conclusion
 
