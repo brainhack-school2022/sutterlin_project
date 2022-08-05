@@ -8,6 +8,7 @@ Brainhack readme file
 <a href="https://github.com/dylansutterlin">
    <br /><sub><b>Dylan Suttelrin-Guindon</b></sub>
 </a>
+
 Education :
   * B.Sc. Neuroscience cognitive(fundamental research option)  from Université de Montréal
 
@@ -24,7 +25,6 @@ In order to better understand how verbal instructions (such as hyper/hypoalgesia
 
 
 ## Tools
-
 
 A machine learning approach will be used to decode pain-evoked brain activity and predict verbal suggestions that was administered prior to painful stimulation.
 
@@ -49,9 +49,6 @@ A Support vector classifier from [sklearn documentation](https://scikit-learn.or
 * Example of a statistical map : 
 
 ![](images/betamaps_07.png)
-![](images/coeff1.png)
-![](images/coeff2.png)
-![](images/coeff3.png)
 
 There were four different type of verbal suggestion to modulate (or not for the control sugestions) the pain experience. Hence, there were four classes to predict with the model. Those four classes are listed a the following : 
 
@@ -103,17 +100,22 @@ The SVC model was performed with a linear kernel
 * Final model accuracy = **0.60970874**
 
 * A Matrix confusion is presented to illustrate the model'performance
+*
 ![](images/confusion_matrix_finalSVC.png)
 
 * With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
 
+![](images/coeff1.png)  
+![](images/coeff2.png)  
+![](images/coeff3.png)  
+![](images/coeff4.png)
+![](images/coeff5.png)
+![](images/coeff6.png)
 
-![](images/glass_brain_model_3subj.png)
-![](images/glass_brain_model_3subj.png)
 
 ## Conclusion
 
-The main objective of this project was to complete a decoding model having the voxels of statistical brain maps as features and verbal suggestions as classes. Globally this project and it objectives have been reached. The delivarables were, in date of july 29th 2022, partly acheived. There still is some work left to do, especially concerning the script organization. Also, althought the code to train the decoding model has been made and is operational, the statistical maps that were used to train the model are prone to change in the sense that quality-control is still required in order to be confident about the validity of the results.  
+The main objective of this project was to complete a decoding model having the voxels of statistical brain maps as features and type of verbal suggestions as classes. Globally this project and it objectives have been reached. The delivarables were mostly acheived. Also, althought the code to train the decoding model has been made and is operational, the statistical maps that were used to train the model are prone to change in the sense that quality-control is still required in order to be confident about the validity of the results.  
 
 ## Acknowledgement
 
