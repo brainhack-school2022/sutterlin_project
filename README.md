@@ -93,24 +93,25 @@ The SVC model was performed with a linear kernel
 
 * A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimension with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
 * Then a SVC was applied using on a K-fold cross-validation with the following parameters : `GroupShuffleSplit(n_splits = 5, test_size = 0.3, random_state = 33)`
-* The results of each of the folds are presented as followed : 
 
-* The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The metrics are presented as followed along the K-folds models:
-
-* Final model accuracy = **0.60970874**
+* The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The final model accuracy = **0.60970874** 
 
 * A Matrix confusion is presented to illustrate the model'performance
-*
+*  * Class 1 = Hyperalgesia
+   * Class 2 = Neutral suggestion in Hyperalgesia run
+   * Class 3 = Hypoalgesia
+   * Class 4 = Neutral suggestion in hypoalgeisa run
+
 ![](images/confusion_matrix_finalSVC.png)
 
-* With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
+* With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()`. Since there were four classes, six different class comparisons can be made and the highest coefficient for each comparison are presented in the plots below. The highest peaks represents the brain regions that either when activated or deactivated (red or blue) had the highest preictive value of the class(type of suggestion). For example, when looking at the first plot, the activation of the dlPFC apears to be the most predictive to predict the Neut_HYPO vs HYPO class. 
 
-![](images/coeff1.png)  
+![](images/coeff1png.png)  
 ![](images/coeff2.png)  
 ![](images/coeff3.png)  
 ![](images/coeff4.png)
 ![](images/coeff5.png)
-![](images/coeff6.png)
+![](images/coef6.png)
 
 
 ## Conclusion
