@@ -49,6 +49,9 @@ A Support vector classifier from [sklearn documentation](https://scikit-learn.or
 * Example of a statistical map : 
 
 ![](images/betamaps_07.png)
+![](images/coeff1.png)
+![](images/coeff2.png)
+![](images/coeff3.png)
 
 There were four different type of verbal suggestion to modulate (or not for the control sugestions) the pain experience. Hence, there were four classes to predict with the model. Those four classes are listed a the following : 
 
@@ -97,22 +100,6 @@ The SVC model was performed with a linear kernel
 
 * The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The metrics are presented as followed along the K-folds models:
 
-_________________________________________
-	Folds	r2	mae	mse	rmse
-________________________________________
-0|	0|	0.003752|	0.692857|	1.240476|	1.113767
-_________________________________________
-1|	1|	0.049787|	0.659722|	1.159722|	1.076904
-_________________________________________
-2|	2|	0.094625|	0.625917|	1.119804|	1.058208
-_________________________________________
-3|	3|	0.117059|	0.635714|	1.111905|	1.054469
-_________________________________________
-4|	4|	0.158126|	0.600950|	1.014252|	1.007101
-_________________________________________
-0|	final|	0.235852|	0.539806|	0.908738|	0.953277
-__________________________________________
-
 * Final model accuracy = **0.60970874**
 
 * A Matrix confusion is presented to illustrate the model'performance
@@ -121,6 +108,7 @@ __________________________________________
 * With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()` function. Since there were four classes, six different compirison of classes can be made and the highest coefficient for each comparison are presented in the interactive plots below.
 
 
+![](images/glass_brain_model_3subj.png)
 ![](images/glass_brain_model_3subj.png)
 
 ## Conclusion
