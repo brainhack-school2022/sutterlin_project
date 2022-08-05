@@ -17,11 +17,9 @@ Education :
 ## Background
 
 Pain is a multi-dimensional experience involving emotional, sensory and motivational aspects. Hypnosis is one intersting psychological 
- tool among many others (like placebo or meditation) that have been shown to effectively modulate pain. Verbal suggestions are an important component of hypnosis and are defined as verbal instructions that are intended to change or induce a cognition, behavior or sensory experience. In the case of pain, suggestions can be hyperalgesic or hypoalgesic, and are intended to increase or decrease pain, respectively. Verbal suggestions to reduce pain can reduce or amplify the brain activity evoked during painful experiences (e.g. during the administration of electrical shocks). 
+ tool among many others (like placebo or meditation) that have been shown to effectively modulate pain. Verbal suggestions are an important component of hypnosis and are defined as verbal instructions that intend to change or induce a cognition, behavior or sensory experience. In the case of pain, suggestions can be hyperalgesic or hypoalgesic, and are intended to increase or decrease pain, respectively. Verbal suggestions to reduce pain can reduce or amplify the brain activity evoked during painful experiences (e.g. during the administration of electrical shocks). 
 
-Studies show that the experience of pain is not correlated with spatially restricted brain activity, but rather is the result of activity in several regions (e.g. anterior mid-Cingulate Cortex, insula, thalamus, somatosensory cortex). Given the distributed nature of brain activity during the experience of pain, multivariate pattern analyses seem to be a good approach to study the subjective experience of pain.
-
-In order to better understand how verbal instructions (such as hyper/hypoalgesia) are integrated by the brain and then result in a modulation of brain activity during the administration of painful stimuli, this project aims to decode pain-related brain activity and identify activation patterns that predict a specific type of verbal suggestion. 
+Studies show that the experience of pain is not correlated with spatially restricted brain activity, but rather is the result of activity in several regions (e.g. anterior mid-Cingulate Cortex, insula, thalamus, somatosensory cortex). Given the distributed nature of brain activity during the experience of pain, multivariate pattern analyses seem to be a good approach to study the subjective experience of pain. In order to better understand how verbal instructions (such as hyper/hypoalgesia) are integrated by the brain and then result in a modulation of brain activity during the administration of painful stimuli, this project aims to decode pain-related brain activity and identify activation patterns that predict a specific type of verbal suggestion. 
 
 
 ## Tools
@@ -31,13 +29,13 @@ A machine learning approach will be used to decode pain-evoked brain activity an
 The tools used to accomplish this task are:
 
 * Python scripts
-* Python modules (pandas, numpy, sklearn, nilearn, nibabel,  matplotlib, seaborn)
+* Python modules (pandas, numpy, sklearn, nilearn, nibabel,  matplotlib)
 * Bash to run the scripts on elm server
 * Git and Github to keep track of the project's evolution
 
 # Data
 
-The dataset that will be used comes from Desmartaux et al., 2021 and is access restricted. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done. 
+The dataset that will be used comes from Desmartaux et al., 2021 and is (unfortunately) access restricted at this time. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done. The image below presented how the different suggestion blocks were organized.
 
 ![](images/protocole_desmartaux2021.png)
 
@@ -46,11 +44,11 @@ The dataset that will be used comes from Desmartaux et al., 2021 and is access r
  
 A Support vector classifier from [sklearn documentation](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) was applied to 1726 statistical brain maps, each modeling the brain activation during a single painful shock. Those contrast maps were generated using a General Linear Model for which the code can be found [here](https://github.com/dylansutterlin/decoding_pain_experience). Those 1726 trials were used to predict the pain modulating condition administered prior to each shock. 
 
-* Example of a statistical map : 
+* Example of a statistical map used as a trial to train the model : 
 
 ![](images/betamaps_07.png)
 
-There were four different type of verbal suggestion to modulate (or not for the control sugestions) the pain experience. Hence, there were four classes to predict with the model. Those four classes are listed a the following : 
+There were four different types of verbal suggestion to modulate (or not for the control sugestions) pain. Hence, there were four classes to predict with the model. Those four classes are listed a the following : 
 
    * Hyperalgesia
    * Neutral suggestion in Hyperalgesia run
@@ -69,17 +67,16 @@ There were four different type of verbal suggestion to modulate (or not for the 
 
 # Results
 
-The SVC model was performed with a linear kernel
 ## Overview
 
 ## Actual deliverables
 
-* - [] Python scripts (main script that run the analyses 
+* - [x] Python scripts (main script that run the analyses 
 * - [x] Metrics and statistics of the performances of the model
-* - [x] Graphics (e.g. ROC curve, confusion matrix)
-* - [x] fMRI maps of the voxels that best predicted suggestions plotted as 3D interactive plots
+* - [x] Graphics (e.g. confusion matrix)
+* - [x] fMRI maps of the voxels that best predicted suggestions
 * - [x] A markdown README.md describing globaly the project and putting it in a scientific context
-* - [] Github repository provinding a fairly open science/reproductible aspect to the project
+* - [x] Github repository provinding a fairly open science/reproductible aspect to the project
 
 ### Final script's structure
 * data :Permission pending to give access to date (...)
@@ -91,9 +88,9 @@ The SVC model was performed with a linear kernel
 
 ## Statistical model
 
+* The SVC model was performed with a linear kernel
 * A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimension with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
 * Then a SVC was applied using on a K-fold cross-validation with the following parameters : `GroupShuffleSplit(n_splits = 5, test_size = 0.3, random_state = 33)`
-
 * The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The final model accuracy = **0.60970874** 
 
 * A Matrix confusion is presented to illustrate the model'performance
