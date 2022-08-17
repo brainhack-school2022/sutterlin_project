@@ -37,7 +37,7 @@ The tools used to accomplish this task are:
 
 # Data
 
-The dataset that will be used comes from Desmartaux et al., 2021 and is access restricted. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done. 
+The dataset that will be used comes from Desmartaux et al., 2021 and has restricted access. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done.
 
 ![](images/protocole_desmartaux2021.png)
 
@@ -74,12 +74,12 @@ The SVC model was performed with a linear kernel
 
 ## Actual deliverables
 
-* - [] Python scripts (main script that run the analyses 
+* - [x] Python scripts (main script that run the analyses
 * - [x] Metrics and statistics of the performances of the model
 * - [x] Graphics (e.g. ROC curve, confusion matrix)
 * - [x] fMRI maps of the voxels that best predicted suggestions plotted as 3D interactive plots
 * - [x] A markdown README.md describing globaly the project and putting it in a scientific context
-* - [] Github repository provinding a fairly open science/reproductible aspect to the project
+* - [x] Github repository provinding a fairly open science/reproductible aspect to the project
 
 ### Final script's structure
 * data :Permission pending to give access to date (...)
@@ -87,11 +87,11 @@ The SVC model was performed with a linear kernel
 * images : The images used in this README.me
 * results : Saved metrics' dataframe, brain maps (.nii files) showing the voxels that were the most predictive of the target
 * scripts : The main scripts with a function file that are called in main.py
-* src : All the general function that can we reused wihout context
+* src : All the general function that can be reused wihout context
 
 ## Statistical model
 
-* A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimension with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
+* A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimensional with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
 * Then a SVC was applied using on a K-fold cross-validation with the following parameters : `GroupShuffleSplit(n_splits = 5, test_size = 0.3, random_state = 33)`
 
 * The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The final model accuracy = **0.60970874** 
@@ -104,7 +104,7 @@ The SVC model was performed with a linear kernel
 
 ![](images/confusion_matrix_finalSVC.png)
 
-* With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()`. Since there were four classes, six different class comparisons can be made and the highest coefficient for each comparison are presented in the plots below. The highest peaks represents the brain regions that either when activated or deactivated (red or blue) had the highest preictive value of the class(type of suggestion). For example, when looking at the first plot, the activation of the dlPFC apears to be the most predictive to predict the Neut_HYPO vs HYPO class. 
+* With the final model, all the coefficients were reprojected to the MNI space using `masker.inverse_transform()`. Since there were four classes, six different class comparisons can be made and the highest coefficient for each comparison are presented in the plots below. The highest peaks represents the brain regions that either when activated or deactivated (red or blue) had the highest preictive value of the class(type of suggestion). For example, when looking at the first plot, the activation of the dlPFC appears to be the most predictive to predict the Neut_HYPO vs HYPO class.
 
 ![](images/coeff1png.png)  
 ![](images/coeff2.png)  
@@ -120,7 +120,7 @@ The main objective of this project was to complete a decoding model having the v
 
 ## Acknowledgement
 
-Thanks to all the instructors, espicially Marie-Eve and Francois who took the time to sit down with me and precise some concepts and shed some light on many topics such as the proper workflow, bebugging techniques. proper use of sklearn, nilearn modules and so on! 
+Thanks to all the instructors, espicially Marie-Eve and Francois who took the time to sit down with me and precise some concepts and shed some light on many topics such as the proper workflow, bebugging techniques, proper use of sklearn, nilearn modules and so on!
 
 ## References
 
