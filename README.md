@@ -35,11 +35,9 @@ The tools used to accomplish this task are:
 
 # Data
 
-<<<<<<< HEAD
 The dataset that will be used comes from Desmartaux et al., 2021 and has restricted access. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done.
 =======
 The dataset that will be used comes from Desmartaux et al., 2021 and is (unfortunately) access restricted at this time. It includes 24 participants (13 women and 11 males) and mean age is 26.9. Subjects participated to a fMRI scanning session where they received hypnosis to either increase or decrease pain. After hypnotic suggestions to modulate pain,a serie of either 6 or 9 painful stimuli were administered. In total, each participant received 72 electrical shocks. Across all participants, a total of 1728 trials/shocks were done. The image below presented how the different suggestion blocks were organized.
->>>>>>> 8c890e128d7f5b989979435ba5e7b8556769f33b
 
 ![](images/protocole_desmartaux2021.png)
 
@@ -75,11 +73,9 @@ There were four different types of verbal suggestion to modulate (or not for the
 
 ## Actual deliverables
 
-<<<<<<< HEAD
+
 * - [x] Python scripts (main script that run the analyses
-=======
 * - [x] Python scripts (main script that run the analyses 
->>>>>>> 8c890e128d7f5b989979435ba5e7b8556769f33b
 * - [x] Metrics and statistics of the performances of the model
 * - [x] Graphics (e.g. confusion matrix)
 * - [x] fMRI maps of the voxels that best predicted suggestions
@@ -96,12 +92,10 @@ There were four different types of verbal suggestion to modulate (or not for the
 
 ## Statistical model
 
-<<<<<<< HEAD
 * A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimensional with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
 =======
 * The SVC model was performed with a linear kernel
 * A nifti masker was used to project the 3 dimmensional contrast maps to 1 dimension with the argument `(mask_strategy = 'whole-brain-template', standardize = True)`
->>>>>>> 8c890e128d7f5b989979435ba5e7b8556769f33b
 * Then a SVC was applied using on a K-fold cross-validation with the following parameters : `GroupShuffleSplit(n_splits = 5, test_size = 0.3, random_state = 33)`
 * The final model was fitted all the training set and was then tested on a subset of data for that the model had never 'seen'. The final model accuracy = **0.60970874** 
 
